@@ -1,0 +1,45 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F8FA;
+    color: #14171A;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    color: #FFFFFF;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 10px 24px;
+    text-decoration: none;
+    margin: 4px 2px;
+  }
+  
+  button:hover {
+    background-color: #0e7cde;
+  }
+  
+  /* Estilos para los posts */
+  .publi {
+    background-color: #FFFFFF;
+    border: 1px solid #EBEEF0;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  }
+  
+  /* Estilos para los links */
+  a {
+    color: #1DA1F2;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

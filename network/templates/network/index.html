@@ -1,0 +1,37 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="compose_post-view">
+        <h3>New Post</h3>
+        <form id="compose-form" action="{% url 'create_post' %}"  method="post">
+            {% csrf_token %}
+            
+           
+            <textarea class="form-control" id="compose-description" name="description" placeholder="description"></textarea>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+    <div>
+        <h3>All Post</h3>
+        <div id="allpost-view">
+            <div id="like_button_container_" method="Post"></div>
+        </div> 
+    </div>
+    
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="{% static 'network/principal.js' %}"></script>
+
+    <button onclick="load_post('index', currentPage - 1)">Anterior</button>
+    <span id="page-indicator">Página 1</span>
+    <button onclick="load_post('index',currentPage + 1)">Siguiente</button>
+{% endblock %}
+
+{% block script %}
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="{% static 'network/principal.js' %}"></script>
+    
+{% endblock %}

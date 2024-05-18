@@ -1,0 +1,32 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="follow-button-container" >
+        
+    </div>
+    <p>Seguidores: <span id="followers-count"></span></p>
+    <p>Siguiendo: <span id="following-count"></span></p>
+
+    <h3>My Post</h3>
+    <div id="my_post-view"></div> 
+
+    
+    <button onclick="load_mypost(currentPage - 1)">Anterior</button>
+    <span id="page-indicator">Página 1</span>
+    <button onclick="load_mypost(currentPage + 1)">Siguiente</button>
+  
+{% endblock %}
+
+{% block script %}
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> 
+    <script type="text/javascript">
+        var profile_username = "{{ profile_username }}";
+    </script>
+    <script src="{% static 'network/cookie.js' %}"></script>
+    <script src="{% static 'network/reactElement.js' %}"></script>
+    <script src="{% static 'network/profile.js' %}"></script>
+    <script src="{% static 'network/followbutton.js' %}"></script>
+
+{% endblock %}
